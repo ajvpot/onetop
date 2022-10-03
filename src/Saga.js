@@ -147,14 +147,15 @@ function* scan(manager: BleManager): Generator<*, *, *> {
   yield put(log('Scanning started...'));
   const scanningChannel = yield eventChannel((emit) => {
     manager.startDeviceScan(
-      null,
+      ['e2779da7-0a82-4be7-b754-31ed3e727253'],
       {allowDuplicates: true},
       (error, scannedDevice) => {
         if (error) {
           emit([error, scannedDevice]);
           return;
         }
-        if (scannedDevice != null && scannedDevice.localName === 'SensorTag') {
+        console.log(scannedDevice);
+        if (scannedDevice != null && scannedDevice.localName && scannedDevice.localName.startsWith("Tasty One Top")) {
           emit([error, scannedDevice]);
         }
       },
