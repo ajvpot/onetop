@@ -155,7 +155,11 @@ function* scan(manager: BleManager): Generator<*, *, *> {
           return;
         }
         console.log(scannedDevice);
-        if (scannedDevice != null && scannedDevice.localName && scannedDevice.localName.startsWith("Tasty One Top")) {
+        if (
+          scannedDevice != null &&
+          scannedDevice.localName &&
+          scannedDevice.localName.startsWith('Tasty One Top')
+        ) {
           emit([error, scannedDevice]);
         }
       },
