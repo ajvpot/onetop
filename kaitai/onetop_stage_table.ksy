@@ -2,8 +2,8 @@ meta:
   id: onetop_stage_table
   file-extension: onetop_stage_table
   endian: be
-  tags:
-    attributeUUID: 29888f67-52e0-4507-8c50-fc4224657d33
+  xref:
+    ble-attribute: 29888f67-52e0-4507-8c50-fc4224657d33
 seq:
   - id: stages
     type: stage
