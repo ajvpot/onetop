@@ -11,4 +11,5 @@ module.exports = {
     'flowtype/space-after-type-colon': 0,
     'react-native/no-inline-styles': 0,
   },
+  ignorePatterns: ['gen/**'],
 };
